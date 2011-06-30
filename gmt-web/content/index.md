@@ -31,4 +31,4 @@ The basic features of `fqgrep` are:
 * generation of parsable detail match statistics reports on each read for 
   custom post-processing
 
-See [[Documentation]] page for further details.
+See [Documentation](documentation.html) page for further details.

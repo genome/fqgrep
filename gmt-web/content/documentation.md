@@ -23,8 +23,8 @@
                                 in search pattern [Default: 0]
             -s <INT>            Max threshold of substitution mismatches to allow
                                 for in search pattern [Default: unlimited]
-            -i <INT>            Max threshold of insertion mismatches to allow for
-                                in search pattern [Default: unlimited]
+            -i <INT>            Max threshold of insertion mismatches to allow
+                                for in search pattern [Default: unlimited]
             -d <INT>            Max threshold of deletion mismatches to allow for
                                 in search pattern [Default: unlimited]
             -S <INT>            Cost of base substitutions in obtaining
@@ -219,7 +219,7 @@ is taken as input into the next piped command:
 
     trimmer --5-prime
  
-[`trimmer`](https://github.com/indraniel/fqgrep/blob/master/scripts/trim
+[`trimmer`](https://github.com/genome/fqgrep/blob/master/scripts/trim
 mer) is an example perl script that produces FASTQ formatted output from
 its supplied `fqgrep` statistics report input. For each input record,
 `trimmer` will trim out the identified match string from the 5' end, if
@@ -242,9 +242,9 @@ The above statement performs a similar function as the prior `trimmer`
 command, but trims from the 3' end instead.
 
 The above
-[`trimmer`](https://github.com/indraniel/fqgrep/blob/master/scripts/trim
+[`trimmer`](https://github.com/genome/fqgrep/blob/master/scripts/trim
 mer) script and another example script
-[`fqgrep-trim.pl`](https://github.com/indraniel/fqgrep/blob/master/scrip
+[`fqgrep-trim.pl`](https://github.com/genome/fqgrep/blob/master/scrip
 ts/fqgrep-trim.pl) are supplied in the fqgrep package. They are both
 simplistic trimmers. The `fqgrep-trim.pl` script performs similiarly to
 the `trimmer` script, but provides a differing output format and user
@@ -270,4 +270,4 @@ This software is provided "as is" without warranty of any kind.
 
 # COPYRIGHT
 
-`fqgrep` is free software, distributed under the terms of the GNU GPL v3 or later: http://gnu.org/licenses/gpl.html.
+`fqgrep` is free software, distributed under the terms of the [GNU GPL v3 or later](http://gnu.org/licenses/gpl.html).
