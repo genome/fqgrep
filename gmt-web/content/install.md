@@ -2,8 +2,8 @@
 
 `fqgrep` depends upon the following libraries:
 
-  * [TRE Regular Expression Library](http://laurikari.net/tre/) version 0.8.0.
-  * [zlib](http://www.zlib.net)
+* [TRE Regular Expression Library](http://laurikari.net/tre/) version 0.8.0.
+* [zlib](http://www.zlib.net)
 
 They will need to be available on your system before fqgrep can be
 installed.

@@ -227,7 +227,7 @@ there was a match. If there was no match, it does nothing and simply
 re-prints out the original fastq record. `trimmer`'s FASTQ output serves
 as the input to the next piped `fqgrep` command:
 
-     fqgrep -a -e -r -p 'AAAAAA$' - 
+    fqgrep -a -e -r -p 'AAAAAA$' - 
 
 The above statement says to find all the reads supplied from standard
 input that have the exact (0 mismatches) polyA sequence `AAAAAA` on its
