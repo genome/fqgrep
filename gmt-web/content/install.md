@@ -14,7 +14,7 @@ On Ubuntu (or any other Debian-based Linux distribution):
 
     sudo apt-get install libtre-dev libtre5
 
-On Mac OS X ( via macports [http://www.macports.org/] ):
+On Mac OS X ( via [macports](http://www.macports.org/) ):
 
     sudo port install tre
 
@@ -59,7 +59,7 @@ Just do the following:
     #                     relevant libraries statically compiled into it
     #
     # try 'make macports' if installing on Mac OS X and you installed the
-    #                     TRE library via macports (http://www.macports.org/)
+    #                     TRE library via [macports](http://www.macports.org/)
  
 The `fqgrep` executable should be in the working directory.  Afterwards,
 you can move the executable to wherever you wish.  Usually, this is the
