@@ -4,40 +4,40 @@
 
 # SYNOPSIS
 
-  fqgrep [options] -p <pattern> <fastq_or_fasta_files>
-          -h                  This help message
-          -V                  Program and version information
-          -p <STRING>         Pattern of interest to grep [REQUIRED]
-          -v                  Invert match - show only sequences that
-                              DO NOT match the pattern
-          -a                  Show all records irregardless of match status
-                              Useful in conjunction with the -r option;
-                              when one would like to do further post-processing
-                              of the match data
-          -c                  Highlight matching string with color
-          -f                  Output matches in FASTA format
-          -r                  Output matches in detailed stats report format
-          -b <STRING>         Delimiter string to separate columns
-                              in detailed stats report [Default: '\t']
-          -m <INT>            Total number of mismatches to at most allow for
-                              in search pattern [Default: 0]
-          -s <INT>            Max threshold of substitution mismatches to allow
-                              for in search pattern [Default: unlimited]
-          -i <INT>            Max threshold of insertion mismatches to allow for
-                              in search pattern [Default: unlimited]
-          -d <INT>            Max threshold of deletion mismatches to allow for
-                              in search pattern [Default: unlimited]
-          -S <INT>            Cost of base substitutions in obtaining
-                              approximate match [Default: 1]
-          -I <INT>            Cost of base insertions in obtaining
-                              approximate match [Default: 1]
-          -D <INT>            Cost of base deletions in obtaining
-                              approximate match [Default: 1]
-          -e                  Force tre regexp engine usage
-          -C                  Display only a total count of matches
-                              (per input FASTQ/FASTA file)
-          -o <out_file>       Desired output file.
-                              If not specified, defaults to stdout
+    fqgrep [options] -p <pattern> <fastq_or_fasta_files>
+            -h                  This help message
+            -V                  Program and version information
+            -p <STRING>         Pattern of interest to grep [REQUIRED]
+            -v                  Invert match - show only sequences that
+                                DO NOT match the pattern
+            -a                  Show all records irregardless of match status
+                                Useful in conjunction with the -r option;
+                                when one would like to do further post-processing
+                                of the match data
+            -c                  Highlight matching string with color
+            -f                  Output matches in FASTA format
+            -r                  Output matches in detailed stats report format
+            -b <STRING>         Delimiter string to separate columns
+                                in detailed stats report [Default: '\t']
+            -m <INT>            Total number of mismatches to at most allow for
+                                in search pattern [Default: 0]
+            -s <INT>            Max threshold of substitution mismatches to allow
+                                for in search pattern [Default: unlimited]
+            -i <INT>            Max threshold of insertion mismatches to allow for
+                                in search pattern [Default: unlimited]
+            -d <INT>            Max threshold of deletion mismatches to allow for
+                                in search pattern [Default: unlimited]
+            -S <INT>            Cost of base substitutions in obtaining
+                                approximate match [Default: 1]
+            -I <INT>            Cost of base insertions in obtaining
+                                approximate match [Default: 1]
+            -D <INT>            Cost of base deletions in obtaining
+                                approximate match [Default: 1]
+            -e                  Force tre regexp engine usage
+            -C                  Display only a total count of matches
+                                (per input FASTQ/FASTA file)
+            -o <out_file>       Desired output file.
+                                If not specified, defaults to stdout
 
 # Software Details
 
