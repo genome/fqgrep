@@ -49,15 +49,15 @@ The installation process currently consists of a very simple Makefile.
 
 Just do the following:
 
-  git clone git://github.com/genome/fqgrep.git;
-  cd fqgrep;
-  make; # try 'make genome'   if at The Genome Institute at Washington University
-        #                     or would like to create an executable with all the
-        #                     relevant libraries statically compiled into it
-        #
-        # try 'make macports' if installing on Mac OS X and you installed the
-        #                     TRE library via macports (http://www.macports.org/)
-
+    git clone git://github.com/genome/fqgrep.git;
+    cd fqgrep;
+    make; # try 'make genome'   if at The Genome Institute at Washington University
+          #                     or would like to create an executable with all the
+          #                     relevant libraries statically compiled into it
+          #
+          # try 'make macports' if installing on Mac OS X and you installed the
+          #                     TRE library via macports (http://www.macports.org/)
+ 
 The `fqgrep` executable should be in the working directory.  Afterwards,
 you can move the executable to wherever you wish.  Usually, this is the
 directory `/usr/local/bin` .
