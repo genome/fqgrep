@@ -11,7 +11,7 @@ menu:
 module_details:
     name: fqgrep
     icon: res/images/icon_48.png
+    icon_16: res/images/icon_16.png
 
 download_link: install.html
 github_url: https://github.com/genome/fqgrep
-
