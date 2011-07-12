@@ -4,8 +4,7 @@
 
 ## SYNOPSIS
 
-<p class="terminal">
-<pre>
+<pre class="terminal">
     fqgrep [options] -p &lt;pattern&gt; &lt;fastq_or_fasta_files&gt;
             -h                  This help message
             -V                  Program and version information
@@ -41,7 +40,6 @@
             -o &lt;out_file&gt;       Desired output file.
                                 If not specified, defaults to stdout
 </pre>
-</p>
 
 ## Software Details
 
