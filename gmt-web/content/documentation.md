@@ -6,10 +6,10 @@
 
 <p class="terminal">
 <pre>
-    fqgrep [options] -p <pattern> <fastq_or_fasta_files>
+    fqgrep [options] -p &lt;pattern&gt; &lt;fastq_or_fasta_files&gt;
             -h                  This help message
             -V                  Program and version information
-            -p <STRING>         Pattern of interest to grep [REQUIRED]
+            -p &lt;STRING&gt;         Pattern of interest to grep [REQUIRED]
             -v                  Invert match - show only sequences that
                                 DO NOT match the pattern
             -a                  Show all records irregardless of match status
@@ -19,26 +19,26 @@
             -c                  Highlight matching string with color
             -f                  Output matches in FASTA format
             -r                  Output matches in detailed stats report format
-            -b <STRING>         Delimiter string to separate columns
+            -b &lt;STRING&gt;         Delimiter string to separate columns
                                 in detailed stats report [Default: '\t']
-            -m <INT>            Total number of mismatches to at most allow for
+            -m &lt;INT&gt;            Total number of mismatches to at most allow for
                                 in search pattern [Default: 0]
-            -s <INT>            Max threshold of substitution mismatches to allow
+            -s &lt;INT&gt;            Max threshold of substitution mismatches to allow
                                 for in search pattern [Default: unlimited]
-            -i <INT>            Max threshold of insertion mismatches to allow
+            -i &lt;INT&gt;            Max threshold of insertion mismatches to allow
                                 for in search pattern [Default: unlimited]
-            -d <INT>            Max threshold of deletion mismatches to allow for
+            -d &lt;INT&gt;            Max threshold of deletion mismatches to allow for
                                 in search pattern [Default: unlimited]
-            -S <INT>            Cost of base substitutions in obtaining
+            -S &lt;INT&gt;            Cost of base substitutions in obtaining
                                 approximate match [Default: 1]
-            -I <INT>            Cost of base insertions in obtaining
+            -I &lt;INT&gt;            Cost of base insertions in obtaining
                                 approximate match [Default: 1]
-            -D <INT>            Cost of base deletions in obtaining
+            -D &lt;INT&gt;            Cost of base deletions in obtaining
                                 approximate match [Default: 1]
             -e                  Force tre regexp engine usage
             -C                  Display only a total count of matches
                                 (per input FASTQ/FASTA file)
-            -o <out_file>       Desired output file.
+            -o &lt;out_file&gt;       Desired output file.
                                 If not specified, defaults to stdout
 </pre>
 </p>
