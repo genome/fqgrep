@@ -90,7 +90,7 @@ altered by the `-b` option.
 
 Below are the columns displayed in the statistics report:
 
-<p class="terminal">
+<pre class="terminal">
     0   read name
     1   total mismatches
     2   # insertions
@@ -101,7 +101,8 @@ Below are the columns displayed in the statistics report:
     7   match string
     8   sequence
     9   quality
-</p>
+</pre>
+
 ### Controlling Match Outputs
 
 By default, the output of fqgrep only displays FASTQ/FASTA records that
