@@ -65,3 +65,5 @@ make;<br />
 The `fqgrep` executable should be in the working directory.  Afterwards,
 you can move the executable to wherever you wish.  Usually, this is the
 directory `/usr/local/bin` .
+
+{% include install/help.html %}
