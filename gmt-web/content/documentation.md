@@ -4,7 +4,7 @@
 
 ## SYNOPSIS
 
-<p class="terminal">fqgrep [options] -p <pattern> <fastq_or_fasta_files>
+    fqgrep [options] -p <pattern> <fastq_or_fasta_files>
             -h                  This help message
             -V                  Program and version information
             -p <STRING>         Pattern of interest to grep [REQUIRED]
@@ -38,7 +38,7 @@
                                 (per input FASTQ/FASTA file)
             -o <out_file>       Desired output file.
                                 If not specified, defaults to stdout
-</p>
+
 ## Software Details
 
 ### Pattern Matching Algorithms Used
