@@ -1,10 +1,10 @@
-# NAME
+## NAME
 
 `fqgrep` - a tool for searching sequences in FASTQ/FASTA files
 
-# SYNOPSIS
+## SYNOPSIS
 
-    fqgrep [options] -p <pattern> <fastq_or_fasta_files>
+<p class="terminal">fqgrep [options] -p <pattern> <fastq_or_fasta_files>
             -h                  This help message
             -V                  Program and version information
             -p <STRING>         Pattern of interest to grep [REQUIRED]
@@ -38,10 +38,10 @@
                                 (per input FASTQ/FASTA file)
             -o <out_file>       Desired output file.
                                 If not specified, defaults to stdout
+</p>
+## Software Details
 
-# Software Details
-
-## Pattern Matching Algorithms Used
+### Pattern Matching Algorithms Used
 
 When simply searching for exact sequence patterns, or in other words,
 when zero mismatches on a pattern are specified (the default case), the
@@ -79,7 +79,7 @@ engine used in [R](http://www.r-project.org); due to this, the results
 of `fqgrep` maybe similar to the results produced by software from the
 [Bioconductor Project](http://www.bioconductor.org).
 
-## Detailed Match Statistics Report (`-r` option)  Notes
+### Detailed Match Statistics Report (`-r` option)  Notes
 
 The `-r` option to `fqgrep` produces a detailed match report of each
 record analyzed in the input FASTQ/FASTA file. Each field of the output
@@ -88,6 +88,7 @@ altered by the `-b` option.
 
 Below are the columns displayed in the statistics report:
 
+<p class="terminal">
     0   read name
     1   total mismatches
     2   # insertions
@@ -98,8 +99,8 @@ Below are the columns displayed in the statistics report:
     7   match string
     8   sequence
     9   quality
-
-## Controlling Match Outputs
+</p>
+### Controlling Match Outputs
 
 By default, the output of fqgrep only displays FASTQ/FASTA records that
 have matched a pattern. Using the `-v` option, will invert the output,
@@ -114,7 +115,7 @@ example.
 When a sequence match is not present for a given record (via the `-v` or
 `-a` options). The "match string" column just contains the string '\*'.
 
-## Other Pattern Matching Notes
+### Other Pattern Matching Notes
 
 * [Only POSIX styled regular expression can be used with
 fqgrep](http://en.wikipedia.org/wiki/Regular_expression#POSIX).
@@ -122,7 +123,7 @@ fqgrep](http://en.wikipedia.org/wiki/Regular_expression#POSIX).
 expression, please use the '-e' option. This forces the use of the TRE
 regular expression engine.
 
-## Reading from Standard Input (STDIN)
+### Reading from Standard Input (STDIN)
 
 If a dash ('-') is used as the input file, it will read the FASTQ/FASTA
 input from standard input (`stdin`). This is useful when piping the
@@ -132,9 +133,9 @@ anything other than a FASTQ/FASTA formatted input in this manner may
 give unexpected behavior to `fqgrep`. See the examples below for
 demonstrative usage.
 
-# Usage & Examples
+## Usage & Examples
 
-## Basic Usage
+### Basic Usage
 
 Search for the sequence pattern 'GATTACA' anywhere in the input reads
 file, `input.fq`, a FASTQ file.
@@ -142,73 +143,73 @@ file, `input.fq`, a FASTQ file.
 _Note that an input can be a FASTA file as well. GZipped input FASTA
 (input.fa.gz) and FASTQ (input.fq.gz) files are acceptable as well._
 
-    fqgrep -p 'GATTACA' input.fq
+<p class="terminal">fqgrep -p 'GATTACA' input.fq</p>
 
-## Outputting in FASTA format (-f option)
+### Outputting in FASTA format (-f option)
 
-    fqgrep -f -p 'GATTACA' input.fq
+<p class="terminal">fqgrep -f -p 'GATTACA' input.fq</p>
 
-## Highlighting matches with color (-c option)
+### Highlighting matches with color (-c option)
 
-    fqgrep -c -f -p 'GATTACA' input.fq
+<p class="terminal">fqgrep -c -f -p 'GATTACA' input.fq</p>
 
-## Allowing pattern mismatches (-m option)
+### Allowing pattern mismatches (-m option)
 
 Allow up one mismatch (insertion, deletion, or substitutions) in the pattern.
 
-    fqgrep -c -f -p 'GATTACA' -m 1 input.fq
+<p class="terminal">fqgrep -c -f -p 'GATTACA' -m 1 input.fq</p>
 
-## Usage of regular expressions
+### Usage of regular expressions
 
 At the beginning of each read, allow for a variable 0 to 3 bases (A, C, G, T, or N) followed by the pattern 'GATTACA'.  Plus, within the 'GATTACA' string, allow for at most a couple mismatches.
 
-    fqgrep -c -f -p '^[AGCTN]{0,3}GATTACA' -m 2 input.fq
+<p class="terminal">fqgrep -c -f -p '^[AGCTN]{0,3}GATTACA' -m 2 input.fq</p>
 
-## View a Stats Report of the Matches (-r option)
+### View a Stats Report of the Matches (-r option)
 
 View a detailed statistics report of just the matches in the above command:
 
-    fqgrep -c -r -p '^[AGCTN]{0,3}GATTACA' -m 2 input.fq
+<p class="terminal">fqgrep -c -r -p '^[AGCTN]{0,3}GATTACA' -m 2 input.fq</p>
 
-## Reading from a pipe or STDIN
+### Reading from a pipe or STDIN
 
 Usage of a single dash, <tt>'-'</tt>, as a file name allows for reading a FASTQ or FASTA file from STDIN.
 
-    cat input.fq | fqgrep -p 'GATTACA' -
+<p class="terminal">cat input.fq | fqgrep -p 'GATTACA' -</p>
 
 _Please note that when reading from standard input, `fqgrep` is
 expecting an input of a FASTQ or FASTQ format. Not a detailed statistics
 report format. See the 'A simple adaptive trimmer' section below for an
 example observation._
 
-## Rudimentary Set Operations
+### Rudimentary Set Operations
 
-### Set Inversion (-v option)
+#### Set Inversion (-v option)
 
 Show all the reads (in FASTQ format) that DO NOT exactly start with 'GATTACA':
 
-    fqgrep -v -e -p '^GATTACA' input.fq
+<p class="terminal">fqgrep -v -e -p '^GATTACA' input.fq</p>
 
-### Set Intersection
+#### Set Intersection
 
 Show all the reads (in FASTQ format) that DO NOT start with 'GATTACA'
 AND end with a polyA sequence (8 or more As) with a couple of
 mismatches:
 
-    fqgrep -v -e -p '^GATTACA' input.fq | fqgrep -m 2 -p 'A{8,}$' -
+<p class="terminal">fqgrep -v -e -p '^GATTACA' input.fq | fqgrep -m 2 -p 'A{8,}$' -</p>
 
-## Example post-processing with `fqgrep`
+### Example post-processing with `fqgrep`
 
-### A simple adaptive trimmer
+#### A simple adaptive trimmer
 
 The following command produces a cheap 5' and 3' end trimmer (assuming
 all the reads in the FASTQ file are oriented in a 5' to 3' direction).
 
-    fqgrep -m 1 -r -p '^[AGCTN]{0,3}GATTACA' input.fq | trimmer --5-prime | fqgrep -e -r -p 'AAAAAA$' - | trimmer --3-prime    
-    
-The first command: 
+<p class="terminal">fqgrep -m 1 -r -p '^[AGCTN]{0,3}GATTACA' input.fq | trimmer --5-prime | fqgrep -e -r -p 'AAAAAA$' - | trimmer --3-prime</p>
 
-    fqgrep -a -m 1 -r -p '^[AGCTN]{0,3}GATTACA'  input.fq
+The first command:
+
+<p class="terminal">fqgrep -a -m 1 -r -p '^[AGCTN]{0,3}GATTACA'  input.fq</p>
 
 says to identify all the reads in the input file that may have 0-3
 random bases (A, G, C, T or N) followed by the sequence `GATTACA`
@@ -217,8 +218,8 @@ records (irregardless if there there is a match or not, `-a` option) in
 the tab-delimited statistics report format (`-r` option) . This output
 is taken as input into the next piped command:
 
-    trimmer --5-prime
- 
+<p class="terminal">trimmer --5-prime</p>
+
 [`trimmer`](https://github.com/genome/fqgrep/blob/master/scripts/trim
 mer) is an example perl script that produces FASTQ formatted output from
 its supplied `fqgrep` statistics report input. For each input record,
@@ -227,7 +228,7 @@ there was a match. If there was no match, it does nothing and simply
 re-prints out the original fastq record. `trimmer`'s FASTQ output serves
 as the input to the next piped `fqgrep` command:
 
-    fqgrep -a -e -r -p 'AAAAAA$' - 
+<p class="terminal">fqgrep -a -e -r -p 'AAAAAA$' -</p>
 
 The above statement says to find all the reads supplied from standard
 input that have the exact (0 mismatches) polyA sequence `AAAAAA` on its
@@ -236,7 +237,7 @@ pattern, the `-e` option of fqgrep is used to ensure the usage of the
 regular expression engine in the pattern search. The output of the above
 is inputted into the following subsequent trimming command:
 
-    trimmer --3-prime
+<p class="terminal">trimmer --3-prime</p>
 
 The above statement performs a similar function as the prior `trimmer`
 command, but trims from the 3' end instead.
@@ -256,18 +257,18 @@ score of the read, the experimental design generating the reads, the
 sequencing technology being used and other notions. This is left for the
 user to further customize for the particular scientific problem at hand.
 
-# Useful References
+## Useful References
 
 * [TRE Regex Syntax Manual](http://laurikari.net/tre/documentation/regex-syntax/)
 
-# AUTHOR
+## AUTHOR
 
 `fqgrep` was written by Indraniel Das <idas@wustl.edu>. 
 
-# DISCLAIMER
+## DISCLAIMER
 
 This software is provided "as is" without warranty of any kind.
 
-# COPYRIGHT
+## COPYRIGHT
 
 `fqgrep` is free software, distributed under the terms of the [GNU GPL v3 or later](http://gnu.org/licenses/gpl.html).
