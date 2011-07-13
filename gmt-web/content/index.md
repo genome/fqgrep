@@ -1,4 +1,5 @@
-## Introduction
+Introduction
+------------
 * * *
 
 `fqgrep` is a [grep](http://en.wikipedia.org/wiki/Grep)
@@ -16,7 +17,8 @@ could:
   presentation to a more intensive analysis pipeline
 
 
-## Features
+Features
+--------
 * * *
 
 The basic features of `fqgrep` are:
