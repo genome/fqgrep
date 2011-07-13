@@ -1,4 +1,5 @@
-## PREREQUISITES
+## Prerequisites
+* * *
 
 `fqgrep` depends upon the following libraries:
 
@@ -43,7 +44,8 @@ the following terminal command for "Path::Class" installation:
 
 <p class="terminal">sudo cpan Path::Class</p>
 
-## INSTALLATION
+## Installation
+* * *
 
 The installation process currently consists of a very simple Makefile.
 
